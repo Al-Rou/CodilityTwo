@@ -32,7 +32,8 @@ public class Solution {
         {
             //The result is the first entry of the list unless otherwise is found!
             result = list.get(0);
-            //
+            //This maps every index, which starts ascend, to the size of ascend. Later, these sizes
+            //are compared to each other in order for us to determine the maximum slice!
             HashMap<Integer, Integer> map= new HashMap<>();
             int counter = 1;
             for (int j = 0; j < list.size()-1; j++)
