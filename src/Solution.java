@@ -35,7 +35,9 @@ public class Solution {
             //This maps every index, which starts ascend, to the size of ascend. Later, these sizes
             //are compared to each other in order for us to determine the maximum slice!
             HashMap<Integer, Integer> map= new HashMap<>();
+            //This counts the size of slice
             int counter = 1;
+            //Every entry in the list will have a size of slice, which is determined here!
             for (int j = 0; j < list.size()-1; j++)
             {
                 if(list.get(j+1) > (list.get(j)+1))
@@ -50,21 +52,17 @@ public class Solution {
                 }
             }
             map.put(result, counter);
-            /*for (int a : map.keySet())
-            {
-                System.out.print(a + ", ");
-            }
-            System.out.print("\n");*/
+            //This list2 is used to store and sort sizes of slices
             List<Integer> list2 = new ArrayList<>();
             for (int a : map.values())
             {
                 list2.add(a);
-                //System.out.print(a + ", ");
             }
-            //System.out.print("\n");
             Collections.sort(list2);
             for(int a : map.keySet())
             {
+                //The associated index to the maximum size of slice is determined and stored in result,
+                //because it is the answer!
                 if(map.get(a) == list2.get(list2.size()-1))
                 {
                     result = a;
