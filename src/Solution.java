@@ -7,6 +7,7 @@ public class Solution {
     public static void main(String[] args)
     {
         Solution s = new Solution();
+        //Test inputs
         int[] input = {60,10,30,20,40,50,55,56,57,58,11,12,8,13};
         //int[] input = {2,2,2,2,-1,0};
         //int[] input = {60,50,40,30,20,10};
